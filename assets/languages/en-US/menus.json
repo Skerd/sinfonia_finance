@@ -1,0 +1,11 @@
+{
+  "finance": {
+    "title": "Finance",
+    "unitCosts": {
+      "title": "Unit costs"
+    },
+    "escrowDashboard": {
+      "title": "Escrow Dashboard"
+    }
+  }
+}

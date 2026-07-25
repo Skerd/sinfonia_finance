@@ -1,0 +1,11 @@
+{
+  "finance": {
+    "title": "Financat",
+    "unitCosts": {
+      "title": "Kostot e njësisë"
+    },
+    "escrowDashboard": {
+      "title": "Paneli Escrow"
+    }
+  }
+}

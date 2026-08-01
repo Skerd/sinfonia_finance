@@ -1,0 +1,78 @@
+{
+	"groups": {
+		"Escrowtransactions": "Escrow Transactions",
+		"Giftcards": "Gift Cards",
+		"Paymenttransactions": "Payment Transactions",
+		"Paymentwebhookevents": "Payment Webhook Events"
+	},
+	"permissions": {
+		"Escrowtransactions": {
+			"amount": "Amount",
+			"createdAt": "CreatedAt",
+			"createdBy": "CreatedBy",
+			"currency": "Currency",
+			"escrowtransactions": "Escrowtransactions",
+			"gatewayPaymentIntentId": "Gateway Payment Intent Id",
+			"gatewayRefundId": "Gateway Refund Id",
+			"gatewayStatus": "Gateway Status",
+			"gatewayTransferId": "Gateway Transfer Id",
+			"order": "Order",
+			"orderMilestone": "OrderMilestone",
+			"recipient": "Recipient",
+			"sourceId": "Source Id",
+			"sourceType": "Source Type",
+			"status": "Status",
+			"stripeClientSecret": "Stripe Client Secret",
+			"type": "Type",
+			"updatedAt": "UpdatedAt"
+		},
+		"Giftcards": {
+			"balance": "Balance",
+			"code": "Code",
+			"createdAt": "Created At",
+			"createdBy": "Created By",
+			"currency": "Currency",
+			"deletedAt": "Deleted At",
+			"deletedBy": "Deleted By",
+			"expiresAt": "Expires At",
+			"giftcards": "Gift Cards",
+			"initialBalance": "Initial Balance",
+			"order": "Order",
+			"purchasedBy": "Purchased By",
+			"status": "Status",
+			"updatedAt": "Updated At"
+		},
+		"Paymenttransactions": {
+			"amount": "Amount",
+			"createdAt": "Created At",
+			"createdBy": "Created By",
+			"currency": "Currency",
+			"deletedAt": "Deleted At",
+			"deletedBy": "Deleted By",
+			"failureReason": "Failure Reason",
+			"gateway": "Gateway",
+			"gatewayPaymentMethodId": "Gateway Payment Method Id",
+			"gatewayResponse": "Gateway Response",
+			"gatewayTransactionId": "Gateway Transaction Id",
+			"metadata": "Metadata",
+			"paymenttransactions": "Payment Transactions",
+			"refundedAmount": "Refunded Amount",
+			"sourceId": "Source Id",
+			"sourceType": "Source Type",
+			"status": "Status",
+			"type": "Type",
+			"updatedAt": "Updated At",
+			"checkout": "Checkout",
+			"order": "Order"
+		},
+		"Paymentwebhookevents": {
+			"createdAt": "Created At",
+			"eventId": "Event Id",
+			"eventType": "Event Type",
+			"gateway": "Gateway",
+			"paymentwebhookevents": "Payment Webhook Events",
+			"processedAt": "Processed At",
+			"updatedAt": "Updated At"
+		}
+	}
+}

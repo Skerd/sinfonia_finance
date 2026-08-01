@@ -1,13 +1,49 @@
 {
   "path": "src/modules/finance/clients/panel/private/paymentTransactions/center/sheetView/paymentTransactionSheetView.tsx",
   "overview": "Përmbledhje",
+  "amounts": "Shumat",
+  "related": "Të lidhura",
+  "failure": "Dështimi",
+  "metadata": "Metadata",
   "paymentTransactionSubtitle": "Detajet e transaksionit",
+  "displayTitle": "Transaksioni",
   "gateway": "Porta e pagesës",
   "status": "Statusi",
   "amount": "Shuma",
   "type": "Lloji",
+  "currency": "Monedha",
   "refundedAmount": "Shuma e rimbursuar",
   "gatewayTransactionId": "ID e transaksionit",
+  "gatewayPaymentMethodId": "Metoda e pagesës në portë",
+  "source": "Burimi",
+  "sourceType": "Lloji i burimit",
+  "sourceId": "ID e burimit",
+  "company": "Kompania",
   "failureReason": "Arsyeja e dështimit",
-  "createdAt": "Krijuar më"
+  "createdAt": "Krijuar më",
+  "updatedAt": "Përditësuar më",
+  "paymentSourceType": {
+    "checkout": "Checkout",
+    "productOrder": "Porosia e produktit"
+  },
+  "paymentTransactionType": {
+    "charge": "Ngarkesë",
+    "refund": "Rimbursim",
+    "payout": "Pagesë dalëse",
+    "dispute": "Mosmarrëveshje"
+  },
+  "paymentTransactionStatus": {
+    "pending": "Në pritje",
+    "succeeded": "I suksesshëm",
+    "failed": "I dështuar",
+    "refunded": "I rimbursuar",
+    "partially_refunded": "I rimbursuar pjesërisht",
+    "disputed": "Në mosmarrëveshje"
+  },
+  "paymentTransactionGateway": {
+    "stripe": "Stripe",
+    "paypal": "PayPal",
+    "manual": "Manuale",
+    "wallet": "Portofol"
+  }
 }

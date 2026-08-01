@@ -14,6 +14,10 @@ import DeleteAction from "@coreModule/components/custom/actions/deleteAction.tsx
 import RestoreAction from "@coreModule/components/custom/actions/restoreAction.tsx";
 import type {DeletedData} from "armonia/src/modules/core/types/shared.types.ts";
 import ActionMenu from "@coreModule/components/custom/actions/menu/actionMenu.tsx";
+import EnableGiftCard from "@financeModule/clients/panel/private/giftCards/center/actions/enableGiftCard.tsx";
+import DisableGiftCard from "@financeModule/clients/panel/private/giftCards/center/actions/disableGiftCard.tsx";
+import EnableGiftCardDialog from "@financeModule/clients/panel/private/giftCards/center/dialogs/enableGiftCardDialog.tsx";
+import DisableGiftCardDialog from "@financeModule/clients/panel/private/giftCards/center/dialogs/disableGiftCardDialog.tsx";
 
 export type GiftCardEntity = {
     _id: string;
@@ -105,7 +109,11 @@ function GiftCardCard({
                                         onAction={(a: string) => setAction(a)}
                                         editPath=""
                                         hideEdit
-                                    />
+                                        allowMenuForCustomChildren
+                                    >
+                                        <EnableGiftCard entity={entity} onAction={(a: string) => setAction(a)} />
+                                        <DisableGiftCard entity={entity} onAction={(a: string) => setAction(a)} />
+                                    </ActionMenu>
                                 </div>
                             )}
                         </div>
@@ -143,6 +151,7 @@ function GiftCardCard({
                             fetchId={entity._id}
                             onDelete={onDelete}
                             onRestore={onRestore}
+                            onSheetRowPatched={(row) => setEntity(row as GiftCardEntity)}
                         />
                     )}
                     {action === "delete" && (
@@ -167,6 +176,22 @@ function GiftCardCard({
                             onSuccess={onRestore}
                             onCancel={() => setAction("")}
                             url="/api/finance/giftCard/restore"
+                        />
+                    )}
+                    {action === "enableGiftCard" && (
+                        <EnableGiftCardDialog
+                            open={true}
+                            onClose={() => setAction("")}
+                            entity={entity}
+                            onSuccess={(row) => setEntity(row)}
+                        />
+                    )}
+                    {action === "disableGiftCard" && (
+                        <DisableGiftCardDialog
+                            open={true}
+                            onClose={() => setAction("")}
+                            entity={entity}
+                            onSuccess={(row) => setEntity(row)}
                         />
                     )}
                 </>

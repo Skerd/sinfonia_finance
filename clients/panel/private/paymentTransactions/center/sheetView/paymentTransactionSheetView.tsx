@@ -7,8 +7,7 @@ import type {PaymentTransaction} from "armonia/src/modules/finance/api/finance/p
 import type {DeleteResponse} from "armonia/src/modules/core/types/shared.types.ts";
 import {useViewConfig} from "@coreModule/helpers/hooks/useViewConfig.ts";
 import SheetViewRenderer from "@coreModule/components/viewEngine/SheetViewRenderer.tsx";
-
-const LIST_BASE = "/finance/paymenttransactions";
+import {paymentTransactionTitle} from "../../paymentTransactionDisplay.ts";
 
 export type PaymentTransactionSheetViewOwnProps = {
     open: boolean;
@@ -20,11 +19,16 @@ export type PaymentTransactionSheetViewOwnProps = {
     fetchId?: string;
 };
 
-function paymentTransactionEditPath(entity: PaymentTransaction) {
-    const params = new URLSearchParams();
-    params.set("paymentTransactionId", entity._id);
-    if ((entity as any).gatewayTransactionId) params.set("paymentTransactionTitle", encodeURIComponent(String((entity as any).gatewayTransactionId)));
-    return `${LIST_BASE}/edit?${params.toString()}`;
+function withSheetTitle(tx: PaymentTransaction, resolveLanguageKey: WithLanguageType["resolveLanguageKey"]) {
+    return {
+        ...tx,
+        // Client-only header label — not part of the API DTO.
+        displayTitle: paymentTransactionTitle(tx, (type) => {
+            const key = `paymentTransactionType.${type}`;
+            const resolved = resolveLanguageKey(key);
+            return resolved !== key ? String(resolved) : type;
+        }),
+    };
 }
 
 function PaymentTransactionSheetView({
@@ -37,14 +41,16 @@ function PaymentTransactionSheetView({
     onRestore = () => {},
     fetchId,
 }: PaymentTransactionSheetViewOwnProps & WithLanguageType) {
-    const [sheetData, setSheetData] = useState<Record<string, unknown>>(entityProp || {_id: fetchId});
+    const [sheetData, setSheetData] = useState<Record<string, unknown>>(
+        entityProp ? withSheetTitle(entityProp, resolveLanguageKey) : {_id: fetchId},
+    );
     const access = useAccess("paymentTransactions");
     const viewConfig = useViewConfig("paymentTransactions", "sheet");
 
     useEffect(() => {
         if (!entityProp) return;
-        setSheetData(entityProp);
-    }, [entityProp]);
+        setSheetData(withSheetTitle(entityProp, resolveLanguageKey));
+    }, [entityProp, resolveLanguageKey]);
 
     const entityId = entityProp?._id ?? fetchId;
 
@@ -55,9 +61,9 @@ function PaymentTransactionSheetView({
         <SheetViewRenderer
             config={viewConfig}
             url="/api/finance/paymentTransaction/single"
-            fetchId={fetchId}
+            fetchId={fetchId ?? entityProp?._id}
             onDataFetched={(data) => {
-                setSheetData(data);
+                setSheetData(withSheetTitle(data as PaymentTransaction, resolveLanguageKey));
             }}
             data={sheetData}
             open={open}
@@ -65,9 +71,10 @@ function PaymentTransactionSheetView({
             resolveLanguageKey={resolveLanguageKey}
             access={access}
             hideActions={hideActions}
+            hideEdit
+            hideDelete
             onDelete={onDelete}
             onRestore={onRestore}
-            
         />
     );
 }

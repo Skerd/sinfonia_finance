@@ -6,6 +6,22 @@
     },
     "escrowDashboard": {
       "title": "Escrow Dashboard"
+    },
+    "paymenttransactions": {
+      "title": "Payment transactions"
+    },
+    "giftcards": {
+      "title": "Gift cards"
+    }
+  },
+  "tenancy": {
+    "systemSettings": {
+      "finance": {
+        "title": "Finance"
+      },
+      "giftcards": {
+        "title": "Gift cards"
+      }
     }
   }
 }

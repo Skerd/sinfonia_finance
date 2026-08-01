@@ -6,6 +6,22 @@
     },
     "escrowDashboard": {
       "title": "Paneli Escrow"
+    },
+    "paymenttransactions": {
+      "title": "Transaksionet e pagesës"
+    },
+    "giftcards": {
+      "title": "Kartat dhuratë"
+    }
+  },
+  "tenancy": {
+    "systemSettings": {
+      "finance": {
+        "title": "Financat"
+      },
+      "giftcards": {
+        "title": "Kartat dhuratë"
+      }
     }
   }
 }

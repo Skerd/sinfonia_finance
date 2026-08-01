@@ -5,13 +5,7 @@ import EntityListPage from "@coreModule/components/entityPage/EntityListPage.tsx
 import type {PaymentTransaction} from "armonia/src/modules/finance/api/finance/private/paymentTransaction/paymentTransaction.dto.ts";
 import type {DeletedData} from "armonia/src/modules/core/types/shared.types.ts";
 import PaymentTransactionCard from "./center/cardView/paymentTransactionCard.tsx";
-
-export function paymentTransactionEditPath(entity: {_id: string; gatewayTransactionId?: string}) {
-    const params = new URLSearchParams();
-    params.set("paymentTransactionId", entity._id);
-    if (entity.gatewayTransactionId) params.set("paymentTransactionTitle", encodeURIComponent(String(entity.gatewayTransactionId)));
-    return `/finance/paymenttransactions/edit?${params.toString()}`;
-}
+import PaymentTransactionSheetView from "./center/sheetView/paymentTransactionSheetView.tsx";
 
 function AllPaymentTransactions({resolveLanguageKey}: WithLanguageType) {
     return (
@@ -21,10 +15,21 @@ function AllPaymentTransactions({resolveLanguageKey}: WithLanguageType) {
             accessModel="paymentTransactions"
             tableConfigKey="paymentTransactions"
             hideCreate
-            buildEditPath={paymentTransactionEditPath}
+            buildEditPath={() => ""}
+            rowActionMenu={{hideEdit: true}}
             resolveLanguageKey={resolveLanguageKey}
             sheetLanguagePath="src/modules/finance/clients/panel/private/paymentTransactions/center/sheetView/paymentTransactionSheetView.tsx"
             cardViewClassName="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+            renderSheet={({open, onOpenChange, entity, fetchId, onDelete, onRestore}) => (
+                <PaymentTransactionSheetView
+                    open={open}
+                    onOpenChange={onOpenChange}
+                    entity={entity}
+                    fetchId={fetchId}
+                    onDelete={onDelete}
+                    onRestore={onRestore}
+                />
+            )}
             renderCard={(entity, onDelete, onRestore) => (
                 <PaymentTransactionCard
                     entity={entity}

@@ -1,4 +1,4 @@
-import {DollarSign} from "lucide-react";
+import {CreditCard, DollarSign} from "lucide-react";
 import type {SidebarContribution} from "@coreModule/clients/panel/moduleContributions/sidebarContribution.types.ts";
 import type {NavGroup, NavItem} from "@coreModule/helpers/panel/sidebarNav.types.ts";
 import type {ResolveLanguageKey} from "@coreModule/helpers/hocs/withLanguage.tsx";
@@ -9,9 +9,17 @@ const financeSidebarContribution: SidebarContribution = {
     getNavGroups(resolveLanguageKey: ResolveLanguageKey): NavGroup[] {
         const items: NavItem[] = [
             {
-                title: resolveLanguageKey("menus.finance.escrowDashboard.title") || resolveLanguageKey("menus.eCommerce.escrowDashboard.title") || "Escrow",
+                title: resolveLanguageKey("menus.finance.escrowDashboard.title") || "Escrow",
                 url: "/finance/escrowdashboard",
                 icon: DollarSign,
+                permissions: [],
+                usersPermissions: [],
+                atLeastOnePermission: true,
+            },
+            {
+                title: resolveLanguageKey("menus.finance.paymenttransactions.title") || "Payment transactions",
+                url: "/finance/paymenttransactions",
+                icon: CreditCard,
                 permissions: [],
                 usersPermissions: [],
                 atLeastOnePermission: true,

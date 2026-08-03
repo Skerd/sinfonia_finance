@@ -6,9 +6,9 @@ import apiClient from "@coreModule/helpers/axiosClients/apiClient.ts";
 import type { EscrowStuckHold, EscrowSummary, EscrowSummaryByCurrency } from "armonia/src/modules/finance/api/finance/private/escrowTransaction/escrowSummary.form.response.type.ts";
 
 const GATEWAY_STATUS_CLASSES: Record<string, string> = {
-    succeeded: "text-green-600",
-    pending: "text-amber-600",
-    failed: "text-red-500",
+    succeeded: "text-success",
+    pending: "text-warning",
+    failed: "text-destructive",
     ledger_only: "text-muted-foreground",
 };
 
@@ -64,8 +64,8 @@ function EscrowDashboard({ resolveLanguageKey }: WithLanguageType) {
                                     <tr key={row.currencyId} className="border-t hover:bg-muted/40">
                                         <td className="px-4 py-2 font-medium">{symbol}</td>
                                         <td className="px-4 py-2 text-right">{row.holds.toFixed(2)}</td>
-                                        <td className="px-4 py-2 text-right text-green-600">{row.releases.toFixed(2)}</td>
-                                        <td className="px-4 py-2 text-right text-red-500">{row.refunds.toFixed(2)}</td>
+                                        <td className="px-4 py-2 text-right text-success">{row.releases.toFixed(2)}</td>
+                                        <td className="px-4 py-2 text-right text-destructive">{row.refunds.toFixed(2)}</td>
                                         <td className="px-4 py-2 text-right text-muted-foreground">{row.fees.toFixed(2)}</td>
                                         <td className="px-4 py-2 text-right font-semibold">{net.toFixed(2)}</td>
                                     </tr>

@@ -18,7 +18,7 @@ function EnableGiftCard({entity, resolveLanguageKey, onAction}: EnableGiftCardPr
 
     return (
         <DropdownMenuItem onClick={() => onAction("enableGiftCard")}>
-            <Power className="text-green-600" size={16} />
+            <Power className="text-success" size={16} />
             {resolveLanguageKey("title")}
         </DropdownMenuItem>
     );

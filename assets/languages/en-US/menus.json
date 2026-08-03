@@ -5,7 +5,7 @@
       "title": "Unit costs"
     },
     "escrowDashboard": {
-      "title": "Escrow Dashboard"
+      "title": "Escrow dashboard"
     },
     "paymenttransactions": {
       "title": "Payment transactions"
@@ -21,6 +21,9 @@
       },
       "giftcards": {
         "title": "Gift cards"
+      },
+      "escrowdashboard": {
+        "title": "Escrow dashboard"
       }
     }
   }

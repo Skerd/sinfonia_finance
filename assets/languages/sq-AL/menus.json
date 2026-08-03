@@ -21,6 +21,9 @@
       },
       "giftcards": {
         "title": "Kartat dhuratë"
+      },
+      "escrowdashboard": {
+        "title": "Paneli Escrow"
       }
     }
   }

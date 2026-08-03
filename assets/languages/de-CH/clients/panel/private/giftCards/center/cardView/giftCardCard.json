@@ -1,0 +1,11 @@
+{
+  "path": "src/modules/finance/clients/panel/private/giftCards/center/cardView/giftCardCard.tsx",
+  "status": "Status",
+  "balance": "Saldo",
+  "purchasedBy": "Purchased von",
+  "giftCardStatus": {
+    "active": "Aktiv",
+    "depleted": "Depleted",
+    "disabled": "Deaktiviert"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "path": "src/modules/finance/clients/panel/private/giftCards/center/sheetView/giftCardSheetView.tsx",
+  "giftCardSubtitle": "Gift karte details",
+  "failedTitle": "Gift karte konnten nicht geladen werden",
+  "failedDescription": "Something went wrong während laden diese gift karte. Click bis retry.",
+  "failedTooltipDescription": "Click bis retry fetching daten.",
+  "overview": "Übersicht",
+  "related": "Zugehörig",
+  "deletion": "Deletion",
+  "code": "Code",
+  "status": "Status",
+  "balance": "Saldo",
+  "initialBalance": "Initial saldo",
+  "currency": "Währung",
+  "expiresAt": "Expires am",
+  "createdAt": "Erstellt",
+  "updatedAt": "Aktualisiert",
+  "order": "Auftrag",
+  "purchasedBy": "Purchased von",
+  "company": "Firma",
+  "createdBy": "Erstellt von",
+  "deletedAt": "Gelöscht",
+  "deletedBy": "Gelöscht von",
+  "giftCardStatus": {
+    "active": "Aktiv",
+    "depleted": "Depleted",
+    "disabled": "Deaktiviert"
+  }
+}

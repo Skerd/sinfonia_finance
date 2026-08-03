@@ -1,0 +1,22 @@
+{
+  "path": "src/modules/finance/clients/panel/private/giftCards/center/dialogs/enableGiftCardDialog.tsx",
+  "title": "Aktivieren gift karte",
+  "description": "Diese gift karte code will become redeemable erneut on die storefront.",
+  "cancel": "Abbrechen",
+  "confirm": "Aktivieren",
+  "busy": "Working…",
+  "axios": {
+    "start": {
+      "title": "Enabling gift karte…",
+      "time": 3000
+    },
+    "success": {
+      "title": "Gift karte enabled",
+      "time": 3000
+    },
+    "error": {
+      "title": "Konnte nicht aktivieren gift karte",
+      "time": 3000
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "groups": {
+    "Escrowtransactions": "Escrow transaktionen",
+    "Giftcards": "Gift cards",
+    "Paymenttransactions": "Zahlung transaktionen",
+    "Paymentwebhookevents": "Zahlung webhook events"
+  },
+  "permissions": {
+    "Escrowtransactions": {
+      "amount": "Betrag",
+      "createdAt": "Erstellt am",
+      "createdBy": "Erstellt von",
+      "currency": "Währung",
+      "escrowtransactions": "Escrow transaktionen",
+      "order": "Auftrag",
+      "orderMilestone": "Auftrag meilenstein",
+      "recipient": "Recipient",
+      "status": "Status",
+      "type": "Typ",
+      "updatedAt": "Aktualisiert am",
+      "gatewayPaymentIntentId": "Gateway zahlung intent ID",
+      "gatewayRefundId": "Gateway rückerstattung ID",
+      "gatewayStatus": "Gateway status",
+      "gatewayTransferId": "Gateway transfer ID",
+      "sourceId": "Quelle ID",
+      "sourceType": "Quelle typ",
+      "stripeClientSecret": "Stripe kunde secret"
+    },
+    "Giftcards": {
+      "balance": "Saldo",
+      "code": "Code",
+      "createdAt": "Erstellt am",
+      "createdBy": "Erstellt von",
+      "currency": "Währung",
+      "deletedAt": "Gelöscht am",
+      "deletedBy": "Gelöscht von",
+      "expiresAt": "Expires am",
+      "giftcards": "Gift cards",
+      "initialBalance": "Initial saldo",
+      "order": "Auftrag",
+      "purchasedBy": "Purchased von",
+      "status": "Status",
+      "updatedAt": "Aktualisiert am"
+    },
+    "Paymenttransactions": {
+      "amount": "Betrag",
+      "createdAt": "Erstellt am",
+      "createdBy": "Erstellt von",
+      "currency": "Währung",
+      "deletedAt": "Gelöscht am",
+      "deletedBy": "Gelöscht von",
+      "failureReason": "Failure grund",
+      "gateway": "Gateway",
+      "gatewayPaymentMethodId": "Gateway zahlung methode ID",
+      "gatewayResponse": "Gateway response",
+      "gatewayTransactionId": "Gateway transaktion ID",
+      "metadata": "Metadata",
+      "paymenttransactions": "Zahlung transaktionen",
+      "refundedAmount": "Refunded betrag",
+      "sourceId": "Quelle ID",
+      "sourceType": "Quelle typ",
+      "status": "Status",
+      "type": "Typ",
+      "updatedAt": "Aktualisiert am",
+      "checkout": "Kasse",
+      "order": "Auftrag"
+    },
+    "Paymentwebhookevents": {
+      "createdAt": "Erstellt am",
+      "eventId": "Event ID",
+      "eventType": "Event typ",
+      "gateway": "Gateway",
+      "paymentwebhookevents": "Zahlung webhook events",
+      "processedAt": "Processed am",
+      "updatedAt": "Aktualisiert am"
+    }
+  }
+}

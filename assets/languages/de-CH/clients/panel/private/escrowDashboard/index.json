@@ -1,0 +1,28 @@
+{
+  "path": "src/modules/finance/clients/panel/private/escrowDashboard/index.tsx",
+  "title": "Escrow Übersicht",
+  "description": "Financial übersicht von escrow transaktionen von währung.",
+  "currency": "Währung",
+  "holds": "Holds",
+  "releases": "Releases",
+  "refunds": "Refunds",
+  "fees": "Fees (Platform)",
+  "net": "Netto bis Platform",
+  "startDate": "Von",
+  "endDate": "Bis",
+  "apply": "Anwenden filter",
+  "noData": "Keine escrow daten gefunden.",
+  "loading": "Laden...",
+  "stuckHoldsTitle": "Stuck holds",
+  "noStuckHolds": "Keine stuck holds — every hold has a matching release oder rückerstattung.",
+  "order": "Auftrag",
+  "amount": "Betrag",
+  "gatewayStatus": "Gateway status",
+  "ageDays": "Age (tage)",
+  "gatewayStatuses": {
+    "ledger_only": "Hauptbuch only",
+    "pending": "Awaiting zahlung",
+    "succeeded": "Bezahlt",
+    "failed": "Fehlgeschlagen"
+  }
+}

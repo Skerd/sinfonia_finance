@@ -1,0 +1,29 @@
+{
+  "path": "src/modules/finance/clients/panel/private/giftCards/index.tsx",
+  "title": "Gift cards",
+  "description": "System-issued store credit — inspect balances, aktivieren oder deaktivieren codes.",
+  "searchPlaceholder": "Suchen oder Filter hinzufügen...",
+  "fields": {
+    "!enums": {
+      "status": {
+        "active": "Aktiv",
+        "depleted": "Depleted",
+        "disabled": "Deaktiviert"
+      }
+    },
+    "code": "Code",
+    "status": "Status",
+    "balance": "Saldo",
+    "initialBalance": "Initial saldo",
+    "currency": "Währung",
+    "purchasedBy": "Purchased von",
+    "order": "Auftrag",
+    "expiresAt": "Expires am",
+    "company": "Firma",
+    "createdBy": "Erstellt von",
+    "createdAt": "Erstellt",
+    "updatedAt": "Aktualisiert",
+    "deletedAt": "Gelöscht",
+    "deletedBy": "Gelöscht von"
+  }
+}

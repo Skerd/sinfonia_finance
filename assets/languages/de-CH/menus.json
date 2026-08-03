@@ -1,0 +1,30 @@
+{
+  "finance": {
+    "title": "Finanzen",
+    "unitCosts": {
+      "title": "Einheitskosten"
+    },
+    "escrowDashboard": {
+      "title": "Escrow dashboard"
+    },
+    "paymenttransactions": {
+      "title": "Zahlung transaktionen"
+    },
+    "giftcards": {
+      "title": "Gift cards"
+    }
+  },
+  "tenancy": {
+    "systemSettings": {
+      "finance": {
+        "title": "Finanzen"
+      },
+      "giftcards": {
+        "title": "Gift cards"
+      },
+      "escrowdashboard": {
+        "title": "Escrow dashboard"
+      }
+    }
+  }
+}

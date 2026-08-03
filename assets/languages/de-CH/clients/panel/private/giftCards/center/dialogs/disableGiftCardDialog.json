@@ -1,0 +1,22 @@
+{
+  "path": "src/modules/finance/clients/panel/private/giftCards/center/dialogs/disableGiftCardDialog.tsx",
+  "title": "Deaktivieren gift karte",
+  "description": "Diese gift karte code will keine longer werden redeemable until it ist enabled erneut.",
+  "cancel": "Abbrechen",
+  "confirm": "Deaktivieren",
+  "busy": "Working…",
+  "axios": {
+    "start": {
+      "title": "Disabling gift karte…",
+      "time": 3000
+    },
+    "success": {
+      "title": "Gift karte disabled",
+      "time": 3000
+    },
+    "error": {
+      "title": "Konnte nicht deaktivieren gift karte",
+      "time": 3000
+    }
+  }
+}

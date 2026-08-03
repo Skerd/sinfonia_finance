@@ -1,0 +1,53 @@
+{
+  "path": "src/modules/finance/clients/panel/private/paymentTransactions/index.tsx",
+  "title": "Zahlung transaktionen",
+  "description": "System-generated zahlung hauptbuch (read-only).",
+  "searchPlaceholder": "Suchen oder Filter hinzufügen...",
+  "fields": {
+    "!enums": {
+      "gateway": {
+        "stripe": "Stripe",
+        "paypal": "PayPal",
+        "manual": "Manuell",
+        "wallet": "Wallet"
+      },
+      "type": {
+        "charge": "Charge",
+        "refund": "Rückerstattung",
+        "payout": "Payout",
+        "dispute": "Streitfall"
+      },
+      "status": {
+        "pending": "Ausstehend",
+        "succeeded": "Succeeded",
+        "failed": "Fehlgeschlagen",
+        "refunded": "Refunded",
+        "partially_refunded": "Partially refunded",
+        "disputed": "Bestritten"
+      },
+      "sourceType": {
+        "checkout": "Kasse",
+        "productOrder": "Produkt auftrag"
+      }
+    },
+    "sourceType": "Quelle typ",
+    "sourceId": "Quelle id",
+    "gateway": "Gateway",
+    "type": "Typ",
+    "status": "Status",
+    "amount": "Betrag",
+    "currency": "Währung",
+    "gatewayTransactionId": "Gateway transaktion id",
+    "gatewayPaymentMethodId": "Gateway zahlung methode",
+    "gatewayResponse": "Gateway response",
+    "failureReason": "Failure grund",
+    "refundedAmount": "Refunded betrag",
+    "metadata": "Metadata",
+    "createdBy": "Erstellt von",
+    "company": "Firma",
+    "createdAt": "Erstellt",
+    "updatedAt": "Aktualisiert",
+    "deletedAt": "Gelöscht",
+    "deletedBy": "Gelöscht von"
+  }
+}

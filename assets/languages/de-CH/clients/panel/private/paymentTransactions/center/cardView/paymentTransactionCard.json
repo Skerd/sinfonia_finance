@@ -1,0 +1,28 @@
+{
+  "path": "src/modules/finance/clients/panel/private/paymentTransactions/center/cardView/paymentTransactionCard.tsx",
+  "gateway": "Gateway",
+  "status": "Status",
+  "amount": "Betrag",
+  "type": "Typ",
+  "gatewayTransactionId": "Gateway transaktion id",
+  "paymentTransactionType": {
+    "charge": "Charge",
+    "refund": "Rückerstattung",
+    "payout": "Payout",
+    "dispute": "Streitfall"
+  },
+  "paymentTransactionStatus": {
+    "pending": "Ausstehend",
+    "succeeded": "Succeeded",
+    "failed": "Fehlgeschlagen",
+    "refunded": "Refunded",
+    "partially_refunded": "Partially refunded",
+    "disputed": "Bestritten"
+  },
+  "paymentTransactionGateway": {
+    "stripe": "Stripe",
+    "paypal": "PayPal",
+    "manual": "Manuell",
+    "wallet": "Wallet"
+  }
+}

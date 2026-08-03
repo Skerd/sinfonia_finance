@@ -1,0 +1,49 @@
+{
+  "path": "src/modules/finance/clients/panel/private/paymentTransactions/center/sheetView/paymentTransactionSheetView.tsx",
+  "overview": "Übersicht",
+  "amounts": "Amounts",
+  "related": "Zugehörig",
+  "failure": "Failure",
+  "metadata": "Metadata",
+  "paymentTransactionSubtitle": "Zahlung transaktion details",
+  "displayTitle": "Transaktion",
+  "gateway": "Gateway",
+  "status": "Status",
+  "amount": "Betrag",
+  "type": "Typ",
+  "currency": "Währung",
+  "refundedAmount": "Refunded betrag",
+  "gatewayTransactionId": "Gateway transaktion id",
+  "gatewayPaymentMethodId": "Gateway zahlung methode",
+  "source": "Quelle",
+  "sourceType": "Quelle typ",
+  "sourceId": "Quelle id",
+  "company": "Firma",
+  "failureReason": "Failure grund",
+  "createdAt": "Erstellt am",
+  "updatedAt": "Aktualisiert am",
+  "paymentSourceType": {
+    "checkout": "Kasse",
+    "productOrder": "Produkt auftrag"
+  },
+  "paymentTransactionType": {
+    "charge": "Charge",
+    "refund": "Rückerstattung",
+    "payout": "Payout",
+    "dispute": "Streitfall"
+  },
+  "paymentTransactionStatus": {
+    "pending": "Ausstehend",
+    "succeeded": "Succeeded",
+    "failed": "Fehlgeschlagen",
+    "refunded": "Refunded",
+    "partially_refunded": "Partially refunded",
+    "disputed": "Bestritten"
+  },
+  "paymentTransactionGateway": {
+    "stripe": "Stripe",
+    "paypal": "PayPal",
+    "manual": "Manuell",
+    "wallet": "Wallet"
+  }
+}

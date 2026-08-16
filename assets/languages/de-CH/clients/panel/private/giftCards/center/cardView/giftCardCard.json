@@ -1,6 +1,7 @@
 {
   "path": "src/modules/finance/clients/panel/private/giftCards/center/cardView/giftCardCard.tsx",
   "status": "Status",
+  "initialBalance": "Anfangssaldo",
   "balance": "Saldo",
   "purchasedBy": "Purchased von",
   "giftCardStatus": {

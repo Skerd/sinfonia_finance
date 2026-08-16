@@ -105,7 +105,9 @@ function GiftCardCard({
                             label={resolveLanguageKey("status")}
                             tooltip={resolveLanguageKey("status")}
                             path="status"
-                            value={row.status ? resolveLanguageKey("giftCardStatus." + row.status) : null}
+                            type="enum"
+                            languageKeyCategory="giftCardStatus"
+                            value={row.status}
                         />
                         <DisplayRow
                             icon={IconCurrencyDollar}

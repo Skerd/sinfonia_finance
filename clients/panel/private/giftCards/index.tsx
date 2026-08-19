@@ -31,5 +31,5 @@ function AllGiftCards({resolveLanguageKey}: WithLanguageType) {
 
 export default compose(
     withLanguage("src/modules/finance/clients/panel/private/giftCards/index.tsx"),
-    withDebug(true, true),
+    withDebug(true, true, "giftCards"),
 )(AllGiftCards);

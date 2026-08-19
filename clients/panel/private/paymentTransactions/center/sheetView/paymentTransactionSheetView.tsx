@@ -81,5 +81,5 @@ function PaymentTransactionSheetView({
 
 export default compose(
     withLanguage("src/modules/finance/clients/panel/private/paymentTransactions/center/sheetView/paymentTransactionSheetView.tsx"),
-    withDebug(true, true),
+    withDebug(true, true, "paymentTransactions"),
 )(PaymentTransactionSheetView);

@@ -110,5 +110,5 @@ function PaymentTransactionCard({
 
 export default compose(
     withLanguage("src/modules/finance/clients/panel/private/paymentTransactions/center/cardView/paymentTransactionCard.tsx"),
-    withDebug(true, true),
+    withDebug(true, true, "paymentTransactions"),
 )(PaymentTransactionCard);

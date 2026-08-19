@@ -117,5 +117,5 @@ function EscrowDashboard({ resolveLanguageKey }: WithLanguageType) {
 
 export default compose(
     withLanguage("src/modules/finance/clients/panel/private/escrowDashboard/index.tsx"),
-    withDebug(true, true),
+    withDebug(true, true, "escrowTransactions"),
 )(EscrowDashboard);

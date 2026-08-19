@@ -43,5 +43,5 @@ function AllPaymentTransactions({resolveLanguageKey}: WithLanguageType) {
 
 export default compose(
     withLanguage("src/modules/finance/clients/panel/private/paymentTransactions/index.tsx"),
-    withDebug(true, true),
+    withDebug(true, true, "paymentTransactions"),
 )(AllPaymentTransactions);

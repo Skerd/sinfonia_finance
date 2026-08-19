@@ -26,5 +26,5 @@ function DisableGiftCard({entity, resolveLanguageKey, onAction}: DisableGiftCard
 
 export default compose(
     withLanguage("src/modules/finance/clients/panel/private/giftCards/center/actions/disableGiftCard.tsx"),
-    withDebug(true, true),
+    withDebug(true, true, "giftCards"),
 )(DisableGiftCard);

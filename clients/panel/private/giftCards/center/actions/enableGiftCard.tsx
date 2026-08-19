@@ -26,5 +26,5 @@ function EnableGiftCard({entity, resolveLanguageKey, onAction}: EnableGiftCardPr
 
 export default compose(
     withLanguage("src/modules/finance/clients/panel/private/giftCards/center/actions/enableGiftCard.tsx"),
-    withDebug(true, true),
+    withDebug(true, true, "giftCards"),
 )(EnableGiftCard);

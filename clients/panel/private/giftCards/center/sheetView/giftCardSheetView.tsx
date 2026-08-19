@@ -109,5 +109,5 @@ function GiftCardSheetView({
 
 export default compose(
     withLanguage("src/modules/finance/clients/panel/private/giftCards/center/sheetView/giftCardSheetView.tsx"),
-    withDebug(true, true),
+    withDebug(true, true, "giftCards"),
 )(GiftCardSheetView);

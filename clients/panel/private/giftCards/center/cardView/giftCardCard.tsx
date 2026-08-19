@@ -142,5 +142,5 @@ function GiftCardCard({
 
 export default compose(
     withLanguage("src/modules/finance/clients/panel/private/giftCards/center/cardView/giftCardCard.tsx"),
-    withDebug(true, true),
+    withDebug(true, true, "giftCards"),
 )(GiftCardCard);

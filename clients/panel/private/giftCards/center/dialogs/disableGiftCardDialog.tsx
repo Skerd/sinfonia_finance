@@ -76,5 +76,5 @@ export default compose(
         {url: "/api/finance/giftCard/disable", method: "POST", data: {}},
         true,
     ),
-    withDebug(true, true),
+    withDebug(true, true, "giftCards"),
 )(DisableGiftCardDialog);

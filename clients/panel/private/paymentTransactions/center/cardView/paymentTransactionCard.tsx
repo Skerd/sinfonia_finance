@@ -5,8 +5,8 @@ import {IconActivity, IconCreditCard, IconCurrencyDollar, IconTag} from "@tabler
 import type {PaymentTransaction} from "armonia/src/modules/finance/api/finance/private/paymentTransaction/paymentTransaction.dto.ts";
 import type {DeletedData} from "armonia/src/modules/core/types/shared.types.ts";
 import PaymentTransactionSheetView from "@financeModule/clients/panel/private/paymentTransactions/center/sheetView/paymentTransactionSheetView.tsx";
-import DisplayRow from "@coreModule/components/custom/displayValue/displayRow.tsx";
-import EntityCard from "@coreModule/components/custom/systemCards/entityCard.tsx";
+import EntityCardRow from "@coreModule/components/entityPage/list/card/entityCardRow.tsx";
+import EntityCard from "@coreModule/components/entityPage/list/card/entityCard.tsx";
 import type {WithAxiosLifecycleRef} from "@coreModule/helpers/hocs/withAxios.tsx";
 import type {RefObject} from "react";
 import {paymentTransactionTitle} from "../../paymentTransactionDisplay.ts";
@@ -66,7 +66,7 @@ function PaymentTransactionCard({
                         })}
                     />
                     <EntityCard.Body>
-                        <DisplayRow
+                        <EntityCardRow
                             icon={IconTag}
                             label={resolveLanguageKey("type")}
                             tooltip={resolveLanguageKey("type")}
@@ -75,7 +75,7 @@ function PaymentTransactionCard({
                             languageKeyCategory="paymentTransactionType"
                             value={row.type}
                         />
-                        <DisplayRow
+                        <EntityCardRow
                             icon={IconCreditCard}
                             label={resolveLanguageKey("gateway")}
                             tooltip={resolveLanguageKey("gateway")}
@@ -84,7 +84,7 @@ function PaymentTransactionCard({
                             languageKeyCategory="paymentTransactionGateway"
                             value={row.gateway}
                         />
-                        <DisplayRow
+                        <EntityCardRow
                             icon={IconActivity}
                             label={resolveLanguageKey("status")}
                             tooltip={resolveLanguageKey("status")}
@@ -93,7 +93,7 @@ function PaymentTransactionCard({
                             languageKeyCategory="paymentTransactionStatus"
                             value={row.status}
                         />
-                        <DisplayRow
+                        <EntityCardRow
                             icon={IconCurrencyDollar}
                             label={resolveLanguageKey("amount")}
                             tooltip={resolveLanguageKey("amount")}

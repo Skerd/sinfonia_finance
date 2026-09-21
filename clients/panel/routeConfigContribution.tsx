@@ -4,7 +4,7 @@ import AllGiftCards from "@financeModule/clients/panel/private/giftCards/index.t
 import type {
     RouteConfigArgs,
     RouteConfigContribution,
-} from "@coreModule/clients/panel/moduleContributions/routeConfigContribution.types.ts";
+} from "@coreModule/helpers/types/routeConfigContribution.types.ts";
 
 const financeRouteConfigContribution: RouteConfigContribution = {
     id: "finance",

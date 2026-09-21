@@ -1,6 +1,6 @@
 import {CreditCard, DollarSign} from "lucide-react";
-import type {SidebarContribution} from "@coreModule/clients/panel/moduleContributions/sidebarContribution.types.ts";
-import type {NavGroup, NavItem} from "@coreModule/helpers/panel/sidebarNav.types.ts";
+import type {SidebarContribution} from "@coreModule/helpers/types/sidebarContribution.types.ts";
+import type {NavGroup, NavItem} from "@coreModule/helpers/types/sidebarNav.types.ts";
 import type {ResolveLanguageKey} from "@coreModule/helpers/hocs/withLanguage.tsx";
 
 const financeSidebarContribution: SidebarContribution = {
@@ -20,7 +20,7 @@ const financeSidebarContribution: SidebarContribution = {
                 title: resolveLanguageKey("menus.finance.paymenttransactions.title") || "Payment transactions",
                 url: "/finance/paymenttransactions",
                 icon: CreditCard,
-                permissions: [],
+                permissions: ["paymentTransactions"],
                 usersPermissions: [],
                 atLeastOnePermission: true,
             },

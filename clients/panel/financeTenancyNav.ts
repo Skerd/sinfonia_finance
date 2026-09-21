@@ -1,6 +1,6 @@
 import {DollarSign, Gift} from "lucide-react";
 import type {ResolveLanguageKey} from "@coreModule/helpers/hocs/withLanguage.tsx";
-import type {NavSubCollapsible} from "@coreModule/helpers/panel/sidebarNav.types.ts";
+import type {NavSubCollapsible} from "@coreModule/helpers/types/sidebarNav.types.ts";
 
 /** Nested under Tenancy → Configurations (owned by finance). */
 export function buildFinanceTenancySettingsSubCollapsible(
@@ -17,7 +17,7 @@ export function buildFinanceTenancySettingsSubCollapsible(
                 title: resolveLanguageKey("menus.tenancy.systemSettings.giftcards.title") || resolveLanguageKey("menus.finance.giftcards.title") || "Gift cards",
                 url: "/tenancy/systemSettings/giftcards",
                 icon: Gift,
-                permissions: [],
+                permissions: ["giftCards"],
                 usersPermissions: [],
                 atLeastOnePermission: true,
             },

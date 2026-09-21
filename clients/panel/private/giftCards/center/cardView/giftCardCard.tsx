@@ -8,8 +8,8 @@ import EnableGiftCard from "@financeModule/clients/panel/private/giftCards/cente
 import DisableGiftCard from "@financeModule/clients/panel/private/giftCards/center/actions/disableGiftCard.tsx";
 import EnableGiftCardDialog from "@financeModule/clients/panel/private/giftCards/center/dialogs/enableGiftCardDialog.tsx";
 import DisableGiftCardDialog from "@financeModule/clients/panel/private/giftCards/center/dialogs/disableGiftCardDialog.tsx";
-import DisplayRow from "@coreModule/components/custom/displayValue/displayRow.tsx";
-import EntityCard from "@coreModule/components/custom/systemCards/entityCard.tsx";
+import EntityCardRow from "@coreModule/components/entityPage/list/card/entityCardRow.tsx";
+import EntityCard from "@coreModule/components/entityPage/list/card/entityCard.tsx";
 import type {WithAxiosLifecycleRef} from "@coreModule/helpers/hocs/withAxios.tsx";
 import type {RefObject} from "react";
 
@@ -76,7 +76,7 @@ function GiftCardCard({
                             open
                             onClose={() => setAction("")}
                             entity={row}
-                            onSuccess={(updated) => setEntity({...row, ...updated})}
+                            onSuccess={(updated?: Partial<GiftCardEntity>) => setEntity({...row, ...updated})}
                         />
                     )}
                     {action === "disableGiftCard" && (
@@ -84,7 +84,7 @@ function GiftCardCard({
                             open
                             onClose={() => setAction("")}
                             entity={row}
-                            onSuccess={(updated) => setEntity({...row, ...updated})}
+                            onSuccess={(updated?: Partial<GiftCardEntity>) => setEntity({...row, ...updated})}
                         />
                     )}
                 </>
@@ -100,7 +100,7 @@ function GiftCardCard({
                         <DisableGiftCard entity={row} onAction={setAction} />
                     </EntityCard.Header>
                     <EntityCard.Body>
-                        <DisplayRow
+                        <EntityCardRow
                             icon={IconTag}
                             label={resolveLanguageKey("status")}
                             tooltip={resolveLanguageKey("status")}
@@ -109,7 +109,7 @@ function GiftCardCard({
                             languageKeyCategory="giftCardStatus"
                             value={row.status}
                         />
-                        <DisplayRow
+                        <EntityCardRow
                             icon={IconCurrencyDollar}
                             label={resolveLanguageKey("initialBalance")}
                             tooltip={resolveLanguageKey("initialBalance")}
@@ -117,7 +117,7 @@ function GiftCardCard({
                             type="currency"
                             value={{amount: row.initialBalance, currency: row.currency}}
                         />
-                        <DisplayRow
+                        <EntityCardRow
                             icon={IconCurrencyDollar}
                             label={resolveLanguageKey("balance")}
                             tooltip={resolveLanguageKey("balance")}
@@ -125,7 +125,7 @@ function GiftCardCard({
                             type="currency"
                             value={{amount: row.balance, currency: row.currency}}
                         />
-                        <DisplayRow
+                        <EntityCardRow
                             icon={IconUser}
                             label={resolveLanguageKey("purchasedBy")}
                             tooltip={resolveLanguageKey("purchasedBy")}

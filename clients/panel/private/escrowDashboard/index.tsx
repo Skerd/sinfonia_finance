@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { compose } from "redux";
 import withLanguage, { WithLanguageType } from "@coreModule/helpers/hocs/withLanguage.tsx";
 import withDebug from "@coreModule/helpers/hocs/withDebug.tsx";
-import apiClient from "@coreModule/helpers/axiosClients/apiClient.ts";
+import apiClient from "@coreModule/helpers/apiClient/apiClient.ts";
 import type { EscrowStuckHold, EscrowSummary, EscrowSummaryByCurrency } from "armonia/src/modules/finance/api/finance/private/escrowTransaction/escrowSummary.form.response.type.ts";
 
 const GATEWAY_STATUS_CLASSES: Record<string, string> = {

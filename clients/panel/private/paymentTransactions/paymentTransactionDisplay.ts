@@ -1,10 +1,11 @@
 import type {PaymentTransaction} from "armonia/src/modules/finance/api/finance/private/paymentTransaction/paymentTransaction.dto.ts";
+import {formatNumber} from "@coreModule/helpers/general/numbers.ts";
 
 /** Client-side amount label from amount + currency (not a DTO field). */
 export function formatPaymentAmount(tx: Pick<PaymentTransaction, "amount" | "currency">): string {
     const n = typeof tx.amount === "number" ? tx.amount : Number(tx.amount);
     const formatted = Number.isFinite(n)
-        ? n.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})
+        ? formatNumber(n, {minimumFractionDigits: 2, maximumFractionDigits: 2})
         : String(tx.amount ?? "");
     const prefix =
         tx.currency?.symbol?.trim() ||
